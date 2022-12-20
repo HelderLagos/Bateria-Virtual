@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #000000e1 url("./Background/drum-bg.jpg");
+    background-size: cover;
+    background-blend-mode: color;
+    font-family: 'Open sans', sans-serif;
+
+}
+
+button {
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.164);
+}
+
+h1, p {
+    color: #FFF;
+    margin-bottom: 20px;
+    font-weight: 500;
+    text-align: center;    
+    font-weight: 200;
+}
+
+
+.keys {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    
+}
+.key {
+    width: 80px;
+    height: 80px;
+    border: 2px solid #FFF;
+    color: rgb(238, 57, 2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: bold;
+    border-radius: 50%;
+}
+.key.active {
+    border: 2px solid rgb(160, 45, 0);
+    color: rgb(13, 0, 15);
+}
+
+.composer {
+    width: 260px;
+    margin-top: 20px;
+}
+.composer #input {
+    width: 100%;
+    outline: none;
+    font-size: 17px;
+    padding: 10px 15px;
+    border-radius: 15px;
+}
+.composer button {
+    width: 100%;
+    height: 40px;
+    background: none;
+    border: 2px solid #FFF;
+    color: #FFF;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 15px;
+}
+.composer button:hover {
+    background-color: rgba(160, 45, 0, 0.199);
+}
+
+footer {
+    margin-top: 20px;
+    color: #FFF;
+    font-size: 13px;
+}
+
+@media (max-width: 600px) {
+body {
+    background: #000000d5 url("./Background/drum-bg.jpg");
+    background-size: contain ;
+};
+}
